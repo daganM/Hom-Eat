@@ -1,4 +1,4 @@
-# simple_app
+# Hom'Eat
 
 Conception et développement d’une application web
 
