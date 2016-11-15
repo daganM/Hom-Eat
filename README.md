@@ -39,4 +39,4 @@ Conception et développement d’une application web
 
 #Front Helpers
 
- In the NoRubyFrontHelpers folder, you can find html & css files as computed by the RoR app. If you don't have RoR on your computeur, you can make front dev in these files before, commit them, then contact a back dev so he can commit them in the app.
+ In the NoRubyFrontHelpers folder, you can find html & css files as computed by the RoR app. If you don't have RoR on your computer, you can make front dev in these files before, commit them, then contact a back dev so he can commit them in the app.
