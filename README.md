@@ -13,7 +13,7 @@ Conception et développement d’une application web
 
 - Pitch :
 
-    Hom'eat est une application de partage de repas, sur le même principe que Blablacar, entre inconnus. L'hôte va poster sur le site une annonce avec le nombre de places disponible a sa table ainsi que le repas qu'il souhaite partager. De plus, il va créer une liste de course et cela va permettre de fixer un prix pour pouvoir s'inscrire à la table. Les réservations vont donc payer les courses à faire. À l'heure et au jour donné, les invités viennent chez l'hôte, aident pour faire à manger, ou non, et partage ce moment tous ensemble. 
+    Hom'eat est une application de partage de repas, sur le même principe que Blablacar, entre inconnus. L'hôte va poster sur le site une annonce avec le nombre de places disponible à sa table ainsi que le repas qu'il souhaite partager. De plus, il va créer une liste de courses et cela va permettre de fixer un prix pour pouvoir s'inscrire à la table. Les réservations vont donc payer les courses à faire. À l'heure et au jour donné, les invités viennent chez l'hôte, aident pour faire à manger, ou non, et partagent ce moment tous ensemble. 
     
 - Expression du métier : 
  - liste des besoins, actions
