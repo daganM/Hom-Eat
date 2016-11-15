@@ -7,22 +7,31 @@ Conception et développement d’une application web
 - min. 1 dev back : Dagan MENEZ
 - min. 1 dev front : Romain RICHARD
 - min. 1 ui : Margaux JESTIN
-- min. 1 ux : Emile MICHALET
+- min. 1 ux : Emile MICHALEY
 
 ##Roadmap
 
-- Pitch
- - description courte
-- Expression du métier
+- Pitch :
+
+    Hom'eat est une application de partage de repas, sur le même principe que Blablacar, entre inconnus. L'hôte va poster sur le site une annonce avec le nombre de places disponible a sa table ainsi que le repas qu'il souhaite partager. De plus, il va créer une liste de course et cela va permettre de fixer un prix pour pouvoir s'inscrire à la table. Les réservations vont donc payer les courses à faire. À l'heure et au jour donné, les invités viennent chez l'hôte, aident pour faire à manger, ou non, et partage ce moment tous ensemble. 
+    
+- Expression du métier : 
  - liste des besoins, actions
-- Proto
+ 
+- Proto :
  - zoning, ux
-- Alpha
+ 
+- Alpha :
  - roadmap, développement pragmatique du métier, dev back/front
-- Alpha test
-- Web design
+ 
+- Alpha test :
+
+- Web design :
  - ui, ux, animation
-- Beta
+ 
+- Beta :
  - dev back/front
-- Beta test
-- Production, com, marketing…
+ 
+- Beta test :
+
+- Production, com, marketing... : 
