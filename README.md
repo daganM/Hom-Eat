@@ -7,7 +7,7 @@ Conception et développement d’une application web
 - min. 1 dev back : Dagan MENEZ
 - min. 1 dev front : Romain RICHARD
 - min. 1 ui : Margaux JESTIN
-- min. 1 ux : Emile MICHALEY
+- min. 1 ux : Emile MICHALET
 
 ##Roadmap
 
@@ -26,15 +26,3 @@ Conception et développement d’une application web
  - dev back/front
 - Beta test
 - Production, com, marketing…
-
-##Projets
-
-- Tchat 
-- Agenda de sortie
-- Shop
-- Streaming
-- Agenda perso
-- Todo
-- Trailer report
-- Timeline publique
-- …
