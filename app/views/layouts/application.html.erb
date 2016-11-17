@@ -7,6 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="sign">
+    <div class="inside" id="signup_inside">
+      <a  onclick="displayNone('sign'); displayNoneClass('inside'); return false;">Fermer</a>
+      <%= render 'devise/registrations/form' %>
+    </div>
+    <div class="inside" id="login_inside">
+      <a href="#" onclick="displayNone('sign'); displayNoneClass('inside'); return false;">Fermer</a>
+      <%= render 'devise/sessions/form' %>
+    </div>
+  </div>
+  <nav>
+
+    <a href="/signup" onclick="displayFlex('sign'); displayFlex('signup_inside'); return false;">Inscription</a>
+    <a href="/login" onclick="displayFlex('sign'); displayFlex('login_inside'); return false;">Connexion</a>
+  </nav>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 <%= yield %>

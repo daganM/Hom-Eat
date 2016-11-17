@@ -14,3 +14,23 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+function displayBlock(id){
+  document.getElementById(id).style.display = "block";
+  return false;
+}
+function displayFlex(id){
+  var div = document.getElementById(id);
+  document.getElementById(id).style.display = "flex";
+  return false;
+}
+function displayNone(id){
+  var div = document.getElementById(id);
+  document.getElementById(id).style.display = "none";
+  return false;
+}
+function displayNoneClass(e){
+  var elements = document.getElementsByClassName("inside");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].style.display = "none";
+}
+}

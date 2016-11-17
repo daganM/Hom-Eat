@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+ /* APPLICATION PRINCIPAL LAYOUT */
+body{
+  margin : 0;
+}
+#sign
+{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(255,255,255,.7);
+  display: none;
+}
+#sign .inside
+{
+  display: none; /* contexte sur le parent */
+  flex-direction: column; /* direction d'affichage verticale */
+  justify-content: center; /* alignement vertical */
+  margin:auto;
+  max-width:500px;
+  border : 1px solid rgb(187, 187, 187);
+  background : white;
+}
+#signup_inside, #login_inside
+{
+  display: none;
+}
