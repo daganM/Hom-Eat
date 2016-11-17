@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :meals
 
   #USERS
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
 
 
   #ROOT
-  root 'meals#index'
+  root 'pages#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
