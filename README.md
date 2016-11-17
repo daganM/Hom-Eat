@@ -13,30 +13,39 @@ Conception et développement d’une application web
 
 - Pitch :
 
-    Hom'eat est une application de partage de repas, sur le même principe que Blablacar, entre inconnus. L'hôte va poster sur le site une annonce avec le nombre de places disponible à sa table ainsi que le repas qu'il souhaite partager. De plus, il va créer une liste de courses et cela va permettre de fixer un prix pour pouvoir s'inscrire à la table. Les réservations vont donc payer les courses à faire. À l'heure et au jour donné, les invités viennent chez l'hôte, aident pour faire à manger, ou non, et partagent ce moment tous ensemble. 
-    
-- Expression du métier : 
+    Hom'eat est une application de partage de repas, sur le même principe que Blablacar, entre inconnus. L'hôte va poster sur le site une annonce avec le nombre de places disponible à sa table ainsi que le repas qu'il souhaite partager. De plus, il va créer une liste de courses et cela va permettre de fixer un prix pour pouvoir s'inscrire à la table. Les réservations vont donc payer les courses à faire. À l'heure et au jour donné, les invités viennent chez l'hôte, aident pour faire à manger, ou non, et partagent ce moment tous ensemble.
+
+- Expression du métier :
  - liste des besoins, actions
- 
+
 - Proto :
  - zoning, ux
- 
+
 - Alpha :
  - roadmap, développement pragmatique du métier, dev back/front
- 
+
 - Alpha test :
 
 - Web design :
  - ui, ux, animation
- 
+
 - Beta :
  - dev back/front
- 
+
 - Beta test :
 
-- Production, com, marketing... : 
+- Production, com, marketing... :
 
 
-#Front Helpers
+###Front Helpers
 
  In the NoRubyFrontHelpers folder, you can find html & css files as computed by the RoR app. If you don't have RoR on your computer, you can make front dev in these files before, commit them, then contact a back dev so he can commit them in the app.
+
+###Local mailer development params
+
+ To make the mailing options work in local (needed for signing up), create a file in config like this `config/local_env.yml`. The local_env.yml name is recognized by git to be ignored in commits, to ensure passwords in this files won't be pushed to GitHub and seen by everyone.
+ In this file, enter :
+ ```ruby
+ GMAIL_USERNAME: 'your.mail@gmail.com'
+ GMAIL_PASSWORD: 'passwd'
+```
