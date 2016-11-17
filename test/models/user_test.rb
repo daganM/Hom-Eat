@@ -15,6 +15,11 @@
 #  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  confirmation_token     :string
+#  confirmed_at           :datetime
+#  confirmation_sent_at   :datetime
+#  first_name             :string
+#  last_name              :string
 #
 
 require 'test_helper'
