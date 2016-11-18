@@ -15,6 +15,7 @@ class MealsController < ApplicationController
   # GET /meals/new
   def new
     @meal = Meal.new
+    @places = Place.where(user: current_user)
   end
 
   # GET /meals/1/edit
@@ -25,6 +26,7 @@ class MealsController < ApplicationController
   # POST /meals.json
   def create
     @meal = Meal.new(meal_params)
+    @meal.user = current_user
 
     respond_to do |format|
       if @meal.save
@@ -69,6 +71,6 @@ class MealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meal_params
-      params.require(:meal).permit(:title, :description, :price, :user_id, :date)
+      params.require(:meal).permit(:title, :description, :price, :user_id, :date, :place_id)
     end
 end

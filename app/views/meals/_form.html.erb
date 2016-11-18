@@ -31,6 +31,13 @@
     <%= f.label :date %><br>
     <%= f.datetime_select :date %>
   </div>
+  <div class="field">
+    <% @places.each do |p| %>
+      <%= p.title %>
+    <% end %>
+    <%= f.label :place %><br>
+
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
