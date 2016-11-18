@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :meals
+  has_many :places
   def to_s
     first_name
   end
