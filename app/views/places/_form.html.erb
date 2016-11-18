@@ -1,10 +1,10 @@
 <script type="text/javascript">
 function initializeAutocomplete(id) {
-var element = document.getElementById(id);
-if (element) {
-  var autocomplete = new google.maps.places.Autocomplete(element, { types: ['geocode'] });
-  google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
-}
+  var element = document.getElementById(id);
+  if (element) {
+    var autocomplete = new google.maps.places.Autocomplete(element, { types: ['geocode'] });
+    google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+  }
 }
 google.maps.event.addDomListener(window, 'load', function() {
   initializeAutocomplete('user_input_autocomplete_address');
@@ -12,7 +12,9 @@ google.maps.event.addDomListener(window, 'load', function() {
 function onPlaceChanged() {
   var place = this.getPlace();
 
-  // console.log(place);  // Uncomment this line to view the full object returned by Google API.
+   console.log(place);  // Uncomment this line to view the full object returned by Google API.
+   console.log("lat : " + place.geometry.location.lat());
+   console.log("lng : " + place.geometry.location.lng());
 
   for (var i in place.address_components) {
     var component = place.address_components[i];
@@ -23,6 +25,8 @@ function onPlaceChanged() {
       }
     }
   }
+  document.getElementById('lat').value = place.geometry.location.lat();
+  document.getElementById('lng').value = place.geometry.location.lng();
 }
 </script>
 <%= simple_form_for(@place) do |f| %>
@@ -31,11 +35,12 @@ function onPlaceChanged() {
   <div class="form-inputs">
     <input id="user_input_autocomplete_address" placeholder="Start typing your address...">
     <%= f.input :title %>
-    <%= f.input :address, input_html: {id: "route"} %>
-    <%= f.input :zipcode, input_html: {id: "postal_code"} %>
-    <%= f.input :city, input_html: {id: "locality"} %>
-    <%= f.input :latitude  %>
-    <%= f.input :longitude %>
+    <%= f.input :street_number, :as => :hidden, input_html: {id: "street_number"} %>
+    <%= f.input :address, :as => :hidden, input_html: {id: "route"} %>
+    <%= f.input :zipcode, :as => :hidden, input_html: {id: "postal_code"} %>
+    <%= f.input :city, :as => :hidden, input_html: {id: "locality"} %>
+    <%= f.input :latitude, :as => :hidden, input_html: {id: "lat"}  %>
+    <%= f.input :longitude, :as => :hidden, input_html: {id: "lng"} %>
   </div>
 
   <div class="form-actions">
