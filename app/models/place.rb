@@ -17,5 +17,7 @@
 class Place < ActiveRecord::Base
   belongs_to :user
   has_many :meals
-
+ def to_s
+   "#{title}, #{zipcode} #{city}."
+ end
 end
