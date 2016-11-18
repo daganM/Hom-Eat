@@ -30,6 +30,6 @@ class User < ActiveRecord::Base
   has_many :meals
   has_many :places
   def to_s
-    first_name
+    "#{first_name.capitalize} #{last_name.chr.capitalize}."
   end
 end
