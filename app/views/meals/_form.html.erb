@@ -24,10 +24,6 @@
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
     <%= f.label :date %><br>
     <%= f.datetime_select :date %>
   </div>
@@ -36,6 +32,7 @@
       <%= p.title %>
     <% end %>
     <%= f.label :place %><br>
+    <%= f.select :place, options_for_select(@places.collect{ |p| [p.title, p.id] }) %>
 
   </div>
   <div class="actions">
