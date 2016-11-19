@@ -1,7 +1,5 @@
 # Hom'Eat
 
-Conception et développement d’une application web
-
 ##Team
 
 - min. 1 dev back : Dagan MENEZ
@@ -36,19 +34,22 @@ Conception et développement d’une application web
 
 - Production, com, marketing... :
 
+###Local internet connection needs
+
+To serve confirmation emails (so that you can login after creating an account) and to create a place (it uses Google Maps API), you need to have a working internet connection on your computer.
 
 ###Local mailer development params (Requires Google account)
 
- To make the mailing options work in local (needed for signing up), create a file in config like this `config/local_env.yml`. The local_env.yml name is recognized by git to be ignored in commits, to ensure passwords in this files won't be pushed to GitHub and seen by everyone.
+ To make the mailing options work in local (needed for signing up), create a file in config like this  : `config/local_env.yml`. The local_env.yml name is recognized by git (thanks to the .gitignore file) to be ignored in commits, to ensure passwords in this file won't be pushed to GitHub and seen by everyone.
  In this file, enter :
  ```ruby
  GMAIL_USERNAME: 'your.mail@gmail.com'
  GMAIL_PASSWORD: 'passwd'
 ```
 After this configuration, try sending a mail from the app (for example by creating an account).  
-If you received the confirmation email into the mailbox of the entered user email, things go on !  
+If you received the confirmation email into the mailbox of the entered user email, things go on ! Nothing more to do !
 
-If you have a `Net::SMTPAuthenticationError` error, Google needs a last operation from your part. Check your configuration Google mailbox (Gmail). You should've received an email from Google. It may be asking you to authorize less secure apps. You need to authorize them by clicking the link inside of it (or go here : https://www.google.com/settings/security/lesssecureapps).  
+But if you have a `Net::SMTPAuthenticationError` error, Google needs a last operation from your part. Check your configuration Google mailbox (Gmail). You should've received an email from Google. It may be asking you to authorize less secure apps. You need to authorize them by clicking the link inside of it (or go here : https://www.google.com/settings/security/lesssecureapps).  
 
 **WARNING : This operation is not available for Google accounts using two-steps authentication !!**  
 
