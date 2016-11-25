@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   	get "/signup" => "devise/registrations#new"
   end
 
+  get 'search' => 'pages#search'
+
   #ROOT
   root 'pages#index'
   # The priority is based upon order of creation: first created -> highest priority.
