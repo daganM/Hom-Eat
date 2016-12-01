@@ -1,5 +1,5 @@
 # Hom'Eat
-
+[![Code Climate](https://codeclimate.com/github/daganM/Hom-Eat/badges/gpa.svg)](https://codeclimate.com/github/daganM/Hom-Eat)
 ##Team
 
 - min. 1 dev back : Dagan MENEZ
