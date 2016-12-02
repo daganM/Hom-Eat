@@ -25,7 +25,7 @@ class PagesController < ApplicationController
   end
 
   private
-    def CoorDistance(lat2 = 0, lng2 = 0, maxDist = 1)
+    def CoorDistance(lat2 = 0, lng2 = 0, maxDist = 20000)
       r = 6371 # in kilometers
       lat2 = lat2.to_f
       lng2 = lng2.to_f
