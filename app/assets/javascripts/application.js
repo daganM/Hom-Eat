@@ -65,4 +65,43 @@ function onPlaceChanged() {
   document.getElementById('lat').value = place.geometry.location.lat();
   document.getElementById('lng').value = place.geometry.location.lng();
 }
-// End of Google Maps Autocomplete API JS
+// End of Google Maps JS Autocomplete API
+// Beginning of Google Maps JS DistanceMatrix API
+function distance(origin_lat, origin_lng, lat, lng, id){
+  var UnitSystem = google.maps.UnitSystem.METRIC;
+  var origin = new google.maps.LatLng(origin_lat,origin_lng);
+  var destination = new google.maps.LatLng(lat, lng);
+  var service = new google.maps.DistanceMatrixService();
+  service.getDistanceMatrix(
+    {
+      origins: [origin],
+      destinations: [destination],
+      travelMode: google.maps.TravelMode.DRIVING,
+      unitSystem: UnitSystem,
+      avoidHighways: true,
+      avoidTolls: true,
+    }, callback);
+
+    function callback(response, status) {
+      console.log("in callback");
+      if (status == google.maps.DistanceMatrixStatus.OK) {
+        console.log("status ok");
+        var origins = response.originAddresses;
+        var destinations = response.destinationAddresses;
+
+        for (var i = 0; i < origins.length; i++) {
+          var results = response.rows[i].elements;
+          for (var j = 0; j < results.length; j++) {
+            var element = results[j];
+            var distance = element.distance.text;
+            var duration = element.duration.text;
+            var from = origins[i];
+            var to = destinations[j];
+            console.log(distance);
+            document.getElementById("meal" + id).innerHTML = distance;
+          }
+        }
+      }
+    }
+}
+// End of Google Maps JS DistanceMatrix API
