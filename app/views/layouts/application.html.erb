@@ -19,16 +19,32 @@
     </div>
   </div>
   <% if !user_signed_in? %>
-    <nav>
-      <a href="/signup" onclick="displayFlex('sign'); displayFlex('signup_inside'); return false;">Inscription</a>
-      <a href="/login" onclick="displayFlex('sign'); displayFlex('login_inside'); return false;">Connexion</a>
+    <nav id="navbarbg" class="navbar navbar-default navbar-fixed-top navbar-HomEat">
+      <div class="container">
+        <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <h1 class="navbar-header">
+          <%= image_tag "Logo-blanc.png", :width => 60, :alt => "Hom'Eat" %>
+        </h1>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/signup" onclick="displayFlex('sign'); displayFlex('signup_inside'); return false;">Inscription</a></li>
+            <li><a href="/login" onclick="displayFlex('sign'); displayFlex('login_inside'); return false;">Connexion</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <% else %>
       <%= link_to "Déconnexion", destroy_user_session_path, :method => :delete %>
     <% end %>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
 <%= yield %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 </body>
 </html>

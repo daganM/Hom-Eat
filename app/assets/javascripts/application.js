@@ -11,9 +11,20 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var $window = $(window);
+$(window).scroll(function(){
+     if ($window.scrollTop() >= 100){
+       document.getElementById('navbarbg').style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+     }
+     else if ($window.scrollTop() < 100) {
+       document.getElementById('navbarbg').style.backgroundColor = "rgba(0,0,0,0)";
+     }
+   });
+
 function displayBlock(id){
   document.getElementById(id).style.display = "block";
   return false;
