@@ -1,20 +1,24 @@
 <div class="headline">
   <div class="container">
-    <h1>Partagez <br />bons repas et <br />bons moments</h1>
+    <span>Partagez <br />bons repas et <br />bons moments</span>
   </div>
 </div>
-<h1>Les trois derniers repas proposés !</h1>
-<% @meals.each do |meal| %>
-  <article class="">
-    <%= meal.title %>
-  </article>
-<% end %>
-<div class="">
-    <h2>Entrez votre adresse </h2>
-    <form action="/search" method="get">
-      <input id="user_input_autocomplete_address" placeholder="Commencer à écrire votre adresse">
-      <input type="hidden" id="lat" name="lat" value="" />
-      <input type="hidden" id="lng" name="lng" value="" />
-    </form>
-
+<div class="container">
+  <div id="search_line">
+    <h4>Une envie de manger accompagné ?</h3>
+    <h2>Où souhaitez-vous partager un repas ?</h2>
+  </div>
+  <% @meals.each do |meal| %>
+    <article class="">
+      <%= meal.title %>
+    </article>
+  <% end %>
+  <div class="">
+      <h2>Entrez votre adresse </h2>
+      <form action="/search" method="get">
+        <input id="user_input_autocomplete_address" placeholder="Commencer à écrire votre adresse">
+        <input type="hidden" id="lat" name="lat" value="" />
+        <input type="hidden" id="lng" name="lng" value="" />
+      </form>
+  </div>
 </div>

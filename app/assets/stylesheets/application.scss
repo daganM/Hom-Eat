@@ -13,23 +13,24 @@
  *= require_tree .
  *= require_self
  */
-
-  $link-color: #FFF;
+  $text-color:                               #33291E !default;
+  $link-color:                               #FFC15E;
   $navbar-default-color:                     #fff !default;
   $navbar-default-link-color:                #fff !default;
   $navbar-default-link-hover-color:          #fff !default;
   $navbar-default-link-hover-bg:             transparent !default;
   $navbar-default-toggle-icon-bar-bg:        #fff !default;
+  $orange:                                   #FFC15E;
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
  /* APPLICATION PRINCIPAL LAYOUT */
  /* Bootstrap container */
 
 body{
   margin : 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 nav.navbar-HomEat
 {
@@ -46,6 +47,8 @@ a, a:hover, a:focus, a:visited
   text-decoration: none;
   color: white;
 }
+// h2{ font-size: 40px; }
+// h4{ font-size: 23px; }
 #sign
 {
   height: 100%;
@@ -74,6 +77,28 @@ a, a:hover, a:focus, a:visited
   background-position: center center;
   background-size: cover;
   display : flex;
+  flex-direction: column; /* direction d'affichage verticale */
+  justify-content: center; /* alignement vertical */
   height: 600px;
   color: white;
+  span{
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column; /* direction d'affichage verticale */
+    justify-content: center; /* alignement vertical */
+    line-height: 1.5em;
+  }
+}
+#search_line
+{
+  border-left: 3px solid $orange;
+  padding-left: 10px;
+  h2
+  {
+    margin-top: -10px;
+  }
+  h4{
+    color: $orange;
+  }
 }
