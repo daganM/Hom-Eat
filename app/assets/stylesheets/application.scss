@@ -70,7 +70,7 @@ a, a:hover, a:focus, a:visited
 }
 .headline
 {
-  background-image : url('header.jpg');
+  background-image : asset-data-url('header.jpg');
   background-position: center center;
   background-size: cover;
   display : flex;
