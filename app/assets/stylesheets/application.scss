@@ -27,7 +27,7 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i');
  /* APPLICATION PRINCIPAL LAYOUT */
  /* Bootstrap container */
 
@@ -112,6 +112,27 @@ a, a:hover, a:focus, a:visited
     flex-direction: column; /* direction d'affichage verticale */
     justify-content: center; /* alignement vertical */
     line-height: 1.5em;
+  }
+}
+.Searchheadline
+{
+  background-image : asset-data-url('Food/food.jpg');
+  background-position: center center;
+  background-size: cover;
+  display : flex;
+  flex-direction: column; /* direction d'affichage verticale */
+  justify-content: center; /* alignement vertical */
+  height: 400px;
+  color: white;
+  span{
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column; /* direction d'affichage verticale */
+    justify-content: center; /* alignement vertical */
+    line-height: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
   }
 }
 .subtitles
