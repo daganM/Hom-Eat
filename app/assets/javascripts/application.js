@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require_tree .
 var $window = $(window);
+// Change nav bg color function of scroll
 $(window).scroll(function(){
      if ($window.scrollTop() >= 100){
        document.getElementById('navbarbg').style.backgroundColor = "rgba(0, 0, 0, 0.6)";
@@ -23,8 +24,16 @@ $(window).scroll(function(){
      else if ($window.scrollTop() < 100) {
        document.getElementById('navbarbg').style.backgroundColor = "rgba(0,0,0,0)";
      }
-   });
-
+});
+// Prevent Enter key on form (for GMaps api to fill forms)
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
 function displayBlock(id){
   document.getElementById(id).style.display = "block";
   return false;

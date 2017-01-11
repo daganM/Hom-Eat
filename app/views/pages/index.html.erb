@@ -3,22 +3,63 @@
     <span>Partagez <br />bons repas et <br />bons moments</span>
   </div>
 </div>
-<div class="container">
-  <div id="search_line">
+<div class="container container-fluid">
+  <div class="subtitles">
     <h4>Une envie de manger accompagné ?</h3>
     <h2>Où souhaitez-vous partager un repas ?</h2>
   </div>
-  <% @meals.each do |meal| %>
-    <article class="">
-      <%= meal.title %>
-    </article>
-  <% end %>
-  <div class="">
-      <h2>Entrez votre adresse </h2>
+  <div class="row">
       <form action="/search" method="get">
-        <input id="user_input_autocomplete_address" placeholder="Commencer à écrire votre adresse">
+        <input class="col-xs-12 col-sm-4 col-sm-offset-2 searchBar" id="user_input_autocomplete_address" placeholder="Ex: 1 Rue Jacques Ellul, 33000 Bordeaux">
         <input type="hidden" id="lat" name="lat" value="" />
         <input type="hidden" id="lng" name="lng" value="" />
+        <input class="col-xs-12 col-sm-2 col-sm-offset-1 he-button" type="submit" value="Trouver une table" />
       </form>
+  </div>
+  <div id="apps">
+    <div class="subtitles">
+      <h4>Vous ne voulez pas vous faire à manger ?</h3>
+      <h3>Réservez n'importe où, n'importe quand !</h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+        <%= image_tag "iphone.png", :class => "img-responsive center-block", :alt => "Photo d'un smartphone.", :style => "max-height: 300px;" %>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= image_tag "appstore.png", :class => "img-responsive center-block", :alt => "App Store", :style => "max-height: 55.72px" %>
+          </div>
+          <div class="col-xs-6">
+            <%= image_tag "googleplay.png", :class => "img-responsive center-block", :alt => "Google Play Store", :style => "max-height: 48px; margin-top: 5px;" %>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix visible-xs"></div>
+    </div>
+  </div>
+  <div class="subtitles">
+    <h4>Vous ne connaissez pas Hom'Eat ?</h3>
+    <h3>Découvrez qui nous sommes</h2>
+  </div>
+  <div id="WhoWeAre">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+        <%= image_tag "iphone.png", :class => "img-responsive center-block", :alt => "Photo d'un smartphone.", :style => "max-height: 300px;" %>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row">
+          <div class="col-xs-6">
+            <%= image_tag "appstore.png", :class => "img-responsive center-block", :alt => "App Store", :style => "max-height: 55.72px" %>
+          </div>
+          <div class="col-xs-6">
+            <%= image_tag "googleplay.png", :class => "img-responsive center-block", :alt => "Google Play Store", :style => "max-height: 48px; margin-top: 5px;" %>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix visible-xs"></div>
+    </div>
   </div>
 </div>

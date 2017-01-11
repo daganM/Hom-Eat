@@ -21,6 +21,9 @@
   $navbar-default-link-hover-bg:             transparent !default;
   $navbar-default-toggle-icon-bar-bg:        #fff !default;
   $orange:                                   #FFC15E;
+  $font-family-sans-serif:                   "Raleway", Helvetica, Arial, sans-serif !default;
+  $font-family-serif:                        Georgia, "Times New Roman", Times, serif !default;
+  $font-family-base:                         $font-family-sans-serif !default;
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -31,6 +34,25 @@
 body{
   margin : 0;
   font-family: 'Raleway', sans-serif;
+}
+p, ol, ul, td {
+  font-family : $font-family-base;
+}
+p{
+  margin: 20px 10px 20px 10px;
+}
+input
+{
+  height: 35px;
+}
+.he-button
+{
+  background-color: $orange;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+  padding: 2px;
+  text-align: center;
 }
 nav.navbar-HomEat
 {
@@ -46,6 +68,8 @@ a, a:hover, a:focus, a:visited
 {
   text-decoration: none;
   color: white;
+  font-weight: bolder;
+  font-size: 1.1em;
 }
 // h2{ font-size: 40px; }
 // h4{ font-size: 23px; }
@@ -90,15 +114,26 @@ a, a:hover, a:focus, a:visited
     line-height: 1.5em;
   }
 }
-#search_line
+.subtitles
 {
   border-left: 3px solid $orange;
   padding-left: 10px;
-  h2
+  margin: 30px 0 50px 0;
+  h2, h3
   {
     margin-top: -10px;
+    text-transform: uppercase;
+    font-size: 30px;
   }
   h4{
     color: $orange;
   }
+}
+.searchBar
+{
+  border-radius: 10px;
+  border: 1px solid rgb(150, 150, 150);
+}
+.searchBar::placeholder, .searchBar::webkit-input-placeholder{
+  font-style: italic;
 }
