@@ -21,9 +21,11 @@
   $navbar-default-link-hover-bg:             transparent !default;
   $navbar-default-toggle-icon-bar-bg:        #fff !default;
   $orange:                                   #FFC15E;
+  $orangedark:                               #FF952B;
   $font-family-sans-serif:                   "Raleway", Helvetica, Arial, sans-serif !default;
   $font-family-serif:                        Georgia, "Times New Roman", Times, serif !default;
   $font-family-base:                         $font-family-sans-serif !default;
+  $text-color:                               #33291E;
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -34,6 +36,10 @@
 body{
   margin : 0;
   font-family: 'Raleway', sans-serif;
+  color: #33291E;
+}
+.container{
+    max-width: 970px;
 }
 p, ol, ul, td {
   font-family : $font-family-base;
@@ -47,7 +53,7 @@ input
 }
 .he-button
 {
-  background-color: $orange;
+  background-color: $orangedark;
   color: white;
   border-radius: 10px;
   border: 0px;
@@ -63,13 +69,16 @@ nav.navbar-HomEat
   h1{
     margin: 5px;
   }
+  a{
+    color: white;
+  }
 }
 a, a:hover, a:focus, a:visited
 {
   text-decoration: none;
-  color: white;
   font-weight: bolder;
   font-size: 1.1em;
+  background-color: transparent;
 }
 // h2{ font-size: 40px; }
 // h4{ font-size: 23px; }
@@ -124,6 +133,7 @@ a, a:hover, a:focus, a:visited
   justify-content: center; /* alignement vertical */
   height: 400px;
   color: white;
+  margin-bottom: 30px;
   span{
     font-weight: bold;
     font-size: 40px;
@@ -157,4 +167,58 @@ a, a:hover, a:focus, a:visited
 }
 .searchBar::placeholder, .searchBar::webkit-input-placeholder{
   font-style: italic;
+}
+.search_item
+{
+  border-radius: 10px;
+  border: 2px solid $orange;
+  padding: 0;
+  transition: box-shadow .15s;
+  .cover
+  {
+    position: relative;
+    height: 175px;
+    border-radius : 10px 10px 0 0;
+    p
+    {
+      position: absolute;
+      bottom: 0px;
+      background: rgba(51,41,30,0.6);
+      margin: 0;
+      color: white;
+      padding: 10px 10px 10px;
+      width: 100%;
+    }
+  }
+  p{
+    color: #33291E;
+  }
+  span{
+    color: #33291E;
+  }
+  .user{
+    img{
+      border-radius: 50%;
+    }
+    span span
+    {
+      font-size: 10px;
+    }
+  }
+  .meal_place
+  {
+    margin-bottom: 5px;
+    font-size: 11px;
+    font-style: italic;
+    color: rgb(170,170,170);
+  }
+  .price
+  {
+    color: $orangedark;
+    padding-right: 20px;
+    padding-bottom: 5px;
+  }
+  &:hover{
+    box-shadow: 0px 0px 4px 0px rgba(173,173,173,1);
+  }
 }

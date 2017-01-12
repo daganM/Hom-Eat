@@ -20,6 +20,7 @@ class MealsController < ApplicationController
 
   # GET /meals/1/edit
   def edit
+    @places = Place.where(user: current_user)
   end
 
   # POST /meals

@@ -19,11 +19,14 @@ var $window = $(window);
 // Change nav bg color function of scroll
 $(window).scroll(function(){
      if ($window.scrollTop() >= 100){
-       document.getElementById('navbarbg').style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+       document.getElementById('navbarbg').style.backgroundColor = "rgba(51,41,30,0.6)";
      }
      else if ($window.scrollTop() < 100) {
        document.getElementById('navbarbg').style.backgroundColor = "rgba(0,0,0,0)";
      }
+    parralax = $window.scrollTop();
+    parralax = parralax/3;
+    $('#headline').css('background-position', "center calc(50% + "+parralax+'px)');
 });
 // Prevent Enter key on form (for GMaps api to fill forms)
 $(document).ready(function() {

@@ -3,10 +3,34 @@
     <span>Trouver le repas qui vous convient </span>
   </div>
 </div>
-<% @meals.each do |meal| %>
-  <article class="">
-    <%= meal.title %>
-    <%= meal.place.city %>
-    <p>Lieu à <span id="meal<%= meal.id %>"><script>// distance(<%= @lat1 %>, <%= @lng1 %>, <%= meal.place.latitude %>, <%= meal.place.longitude %>, <%= meal.id %>);</script><%= image_tag("ellipsis.gif") %></span></p>
-  </article>
+<div class="container">
+  <div class="row">
+    <% @meals.each do |meal| %>
+      <%= link_to meal do %>
+        <div class="col-xs-12 col-sm-3 search_item">
+          <div class="cover" style="background: url(<%= image_url('Food/food3.jpg') %>); background-size: cover; background-position: center;">
+            <p><%= meal.date %></p>
+          </div>
+          <div class="user">
+            <div class="row">
+              <div class="col-xs-2">
+                <%= image_tag avatar_url(meal.user) %>
+              </div>
+              <div class="col-xs-6 center-block">
+                <span><span>Ajouté par<br /></span> <%= meal.user %></span>
+              </div>
+            </div>
+          </div>
+          <h4><%= meal.title %></h4>
+          <p>
+            <%= truncate(meal.description, :length => 50) %>
+          </p>
+          <div class="row">
+            <div class="meal_place col-xs-8"> <%= meal.place.city %> / lieu à <span id="meal<%= meal.id %>"><script>distance(<%= @lat1 %>, <%= @lng1 %>, <%= meal.place.latitude %>, <%= meal.place.longitude %>, <%= meal.id %>);</script><%= image_tag("ellipsis.gif") %></span></div>
+            <div class="col-xs-4 text-right price"><%= meal.price %> €</div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 <% end %>

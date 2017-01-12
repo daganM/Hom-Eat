@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Hom'Eat</title>
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDrwDJ8fThGt0bS7x2GGt2sGa3zZKsPFc0&libraries=places"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrwDJ8fThGt0bS7x2GGt2sGa3zZKsPFc0&libraries=places"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -29,7 +29,9 @@
           <span class="icon-bar"></span>
         </button>
         <h1 class="navbar-header">
-          <%= image_tag "Logo-blanc.png", :width => 60, :alt => "Hom'Eat" %>
+          <%= link_to root_path do %>
+            <%= image_tag "Logo-blanc.png", :width => 60, :alt => "Hom'Eat" %>
+            <% end %>
         </h1>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
