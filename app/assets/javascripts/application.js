@@ -17,16 +17,60 @@
 //= require_tree .
 var $window = $(window);
 // Change nav bg color function of scroll
-$(window).scroll(function(){
-     if ($window.scrollTop() >= 100){
-       document.getElementById('navbarbg').style.backgroundColor = "rgba(51,41,30,0.6)";
-     }
-     else if ($window.scrollTop() < 100) {
-       document.getElementById('navbarbg').style.backgroundColor = "rgba(0,0,0,0)";
-     }
-    parralax = $window.scrollTop();
-    parralax = parralax/3;
-    $('#headline').css('background-position', "center calc(50% + "+parralax+'px)');
+$(document).ready(function() {
+var logo_width = document.getElementById('logo').style.width = '100px'
+console.log(logo_width)
+  $(window).scroll(function(){
+
+       if ($window.scrollTop() >= 100){
+         document.getElementById('navbarbg').style.backgroundColor = "rgba(51,41,30,0.6)";
+         if(logo_width == '100px'){
+           document.getElementById('logo').style.width = '100px';
+             $( "#logo" ).animate({
+               width: '40px',
+            }, 300, function() {
+              console.log("Small");
+            });
+            $( "nav h1" ).animate({
+              margin: '0 0 0 0'
+           }, 300, function() {
+             // Animation complete.
+             console.log("Big");
+
+           });
+            // document.getElementById('logo').style.width = "40px";
+            logo_width = '40px';
+
+        } else {}
+       } else if ($window.scrollTop() < 100) {
+         document.getElementById('navbarbg').style.backgroundColor = "rgba(0,0,0,0)";
+         if(logo_width == '40px'){
+           document.getElementById('logo').style.width = '40px';
+           $( "#logo" ).animate({
+             width: '100px',
+          }, 300, function() {
+            // Animation complete.
+            console.log("Big");
+
+          });
+          $( "nav h1" ).animate({
+            margin: '30px 0 0 0'
+         }, 300, function() {
+           // Animation complete.
+           console.log("Big");
+
+         });
+          // document.getElementById('logo').style.width = "100px";
+          logo_width = '100px';
+
+        } else {}
+
+
+       }
+      parralax = $window.scrollTop();
+      parralax = parralax/3;
+      $('#headline').css('background-position', "center calc(50% + "+parralax+'px)');
+  });
 });
 // Prevent Enter key on form (for GMaps api to fill forms)
 $(document).ready(function() {
