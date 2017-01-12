@@ -24,10 +24,10 @@ console.log(logo_width)
 
        if ($window.scrollTop() >= 100){
          document.getElementById('navbarbg').style.backgroundColor = "rgba(51,41,30,0.6)";
-         if(logo_width == '100px'){
+         if(logo_width === '100px'){
            document.getElementById('logo').style.width = '100px';
              $( "#logo" ).animate({
-               width: '40px',
+               width: '40px'
             }, 300, function() {
               console.log("Small");
             });
@@ -41,13 +41,13 @@ console.log(logo_width)
             // document.getElementById('logo').style.width = "40px";
             logo_width = '40px';
 
-        } else {}
+        }
        } else if ($window.scrollTop() < 100) {
          document.getElementById('navbarbg').style.backgroundColor = "rgba(0,0,0,0)";
-         if(logo_width == '40px'){
+         if(logo_width === '40px'){
            document.getElementById('logo').style.width = '40px';
            $( "#logo" ).animate({
-             width: '100px',
+             width: '100px'
           }, 300, function() {
             // Animation complete.
             console.log("Big");
@@ -63,7 +63,7 @@ console.log(logo_width)
           // document.getElementById('logo').style.width = "100px";
           logo_width = '100px';
 
-        } else {}
+        }
 
 
        }
@@ -75,7 +75,7 @@ console.log(logo_width)
 // Prevent Enter key on form (for GMaps api to fill forms)
 $(document).ready(function() {
   $(window).keydown(function(event){
-    if(event.keyCode == 13) {
+    if(event.keyCode === 13) {
       event.preventDefault();
       return false;
     }
