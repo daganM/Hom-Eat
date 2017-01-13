@@ -13,7 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
+// require turbolinks
 //= require_tree .
 var $window = $(window);
 // Change nav bg color function of scroll
@@ -101,8 +101,8 @@ function displayNoneClass(e){
     elements[i].style.display = "none";
 }
 }
-
 // Google Maps Autocomplete API JS
+
 function initializeAutocomplete(id) {
   var element = document.getElementById(id);
   if (element) {
@@ -113,6 +113,9 @@ function initializeAutocomplete(id) {
 google.maps.event.addDomListener(window, 'load', function() {
   initializeAutocomplete('user_input_autocomplete_address');
 });
+$(document).on('page:receive', initializeAutocomplete('user_input_autocomplete_address'));
+$(document).on('turbolinks:receive', initializeAutocomplete('user_input_autocomplete_address'));
+
 function onPlaceChanged() {
   var place = this.getPlace();
 
