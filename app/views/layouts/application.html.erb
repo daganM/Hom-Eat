@@ -11,11 +11,11 @@
 <body>
   <div id="sign">
     <div class="inside" id="signup_inside">
-      <a  onclick="displayNone('sign'); displayNoneClass('inside'); return false;">Fermer</a>
+      <a onclick="displayNone('sign'); displayNoneClass('inside'); return false;">Fermer</a>
       <%= render 'devise/registrations/form' %>
     </div>
     <div class="inside" id="login_inside">
-      <a href="#" onclick="displayNone('sign'); displayNoneClass('inside'); return false;">Fermer</a>
+      <a onclick="displayNone('sign'); displayNoneClass('inside'); return false;">Fermer</a>
       <%= render 'devise/sessions/form' %>
     </div>
   </div>
@@ -55,5 +55,38 @@
 <%= yield %>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+<footer class="row">
+  <div class="container">
+    <div class="col-xs-12 col-sm-4">
+      <h5>Villes</h5>
+      <div class="row">
+        <p class="col-xs-6 col-sm-4">Bordeaux</p>
+        <p class="col-xs-6 col-sm-4">Marseille</p>
+        <p class="col-xs-6 col-sm-4">Lyon</p>
+        <p class="col-xs-6 col-sm-4">Bayonne</p>
+        <p class="col-xs-6 col-sm-4">Biarritz</p>
+        <p class="col-xs-6 col-sm-4">Paris</p>
+        <p class="col-xs-6 col-sm-4">Strasbourg</p>
+        <p class="col-xs-6 col-sm-4">Nantes</p>
+        <p class="col-xs-6 col-sm-4">Nice</p>
+        <p class="col-xs-6 col-sm-4">tours</p>
+        <p class="col-xs-6 col-sm-4">+ de villes</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <h5>Menu</h5>
+      <p class="col-xs-6 col-sm-4 center-b">Home</p>
+      <p class="col-xs-6 col-sm-4">Trouver un repas</p>
+      <p class="col-xs-6 col-sm-4">Proposer un repas</p>
+      <p class="col-xs-6 col-sm-4">Profil</p>
+      <p class="col-xs-6 col-sm-4">A propos</p>
+      <p class="col-xs-6 col-sm-4">Presse</p>
+      <p class="col-xs-6 col-sm-4">FAQ</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <h5>Nous suivre</h5>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
