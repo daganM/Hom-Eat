@@ -1,8 +1,12 @@
-<h1>New Meal</h1>
+<div class="Searchheadline">
+  <div class="container center-block">
+    <span>Ajoutez un nouveau repas</span>
+  </div>
+</div>
 <% if user_signed_in? %>
   <%= render 'form' %>
 
-  <%= link_to 'Back', meals_path %>
+  <%= link_to 'Back', root_path %>
 <% else %>
   <p>Vous devez être connecté pour accéder  à cette page.</p>
 <% end %>
