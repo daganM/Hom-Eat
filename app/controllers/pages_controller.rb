@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @lat1 = params[:lat].to_f
     @lng1 = params[:lng].to_f
     places = Place.all
+    @status = true
     place_ids = []
     places.each do |p|
       if CoorDistance(p.latitude, p.longitude)
@@ -16,6 +17,9 @@ class PagesController < ApplicationController
       end
     end
     @meals = Meal.where(place_id: place_ids)
+    if @meals.empty?
+      @status = false
+    end
   end
 
   def about

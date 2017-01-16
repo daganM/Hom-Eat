@@ -81,18 +81,8 @@ $(document).ready(function() {
     }
   });
 });
-function displayBlock(id){
-  document.getElementById(id).style.display = "block";
-  return false;
-}
-function displayFlex(id){
-  var div = document.getElementById(id);
-  document.getElementById(id).style.display = "flex";
-  return false;
-}
-function displayNone(id){
-  var div = document.getElementById(id);
-  document.getElementById(id).style.display = "none";
+function display(id, type){
+  document.getElementById(id).style.display = type;
   return false;
 }
 function displayNoneClass(e){
@@ -149,7 +139,7 @@ function distance(origin_lat, origin_lng, lat, lng, id){
       travelMode: google.maps.TravelMode.DRIVING,
       unitSystem: UnitSystem,
       avoidHighways: true,
-      avoidTolls: true,
+      avoidTolls: true
     }, callback);
 
     function callback(response, status) {

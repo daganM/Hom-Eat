@@ -230,6 +230,10 @@ footer
 {
   color: white;
   background-color: $orangedark;
+  &.row{
+    margin-left : 0;
+    margin-right: 0;
+  }
   a{
     color : white;
   }
