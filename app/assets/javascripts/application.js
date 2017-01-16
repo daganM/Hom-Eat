@@ -42,7 +42,7 @@ console.log(logo_width)
             logo_width = '40px';
 
         }
-       } else if ($window.scrollTop() < 100) {
+       } else {
          document.getElementById('navbarbg').style.backgroundColor = "rgba(0,0,0,0)";
          if(logo_width === '40px'){
            document.getElementById('logo').style.width = '40px';
@@ -144,7 +144,7 @@ function distance(origin_lat, origin_lng, lat, lng, id){
 
     function callback(response, status) {
       console.log("in callback");
-      if (status == google.maps.DistanceMatrixStatus.OK) {
+      if (status === google.maps.DistanceMatrixStatus.OK) {
         console.log("status ok");
         var origins = response.originAddresses;
         var destinations = response.destinationAddresses;
