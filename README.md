@@ -1,6 +1,7 @@
 # Hom'Eat
 [![Code Climate](https://codeclimate.com/github/daganM/Hom-Eat/badges/gpa.svg)](https://codeclimate.com/github/daganM/Hom-Eat)
 
+**Important : You still may have issue with the confirmation email sent for sign up on production platform. You can test the app using this account : dagan.menez@free.fr. Password : 123456
 
 ##Projet
 
