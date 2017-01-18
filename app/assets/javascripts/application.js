@@ -16,20 +16,22 @@
 // require turbolinks
 //= require_tree .
 var $window = $(window);
+var $logoSmall = "40px"
+var $logoBig = "100px"
 // Change nav bg color function of scroll
 $(document).ready(function() {
 if (document.getElementById('logo') !== 'undefined') {
-  var logo_width = document.getElementById('logo').style.width = '100px'
+  var logo_width = document.getElementById('logo').style.width = $logoBig
 }
 console.log(logo_width)
   $(window).scroll(function(){
 
        if ($window.scrollTop() >= 100){
          document.getElementById('navbarbg').style.backgroundColor = "rgba(51,41,30,0.6)";
-         if(logo_width === '100px'){
-           document.getElementById('logo').style.width = '100px';
+         if(logo_width === $logoBig){
+           document.getElementById('logo').style.width = $logoBig;
              $( "#logo" ).animate({
-               width: '40px'
+               width: $logoSmall
             }, 300, function() {
               console.log("Small");
             });
@@ -41,15 +43,15 @@ console.log(logo_width)
 
            });
             // document.getElementById('logo').style.width = "40px";
-            logo_width = '40px';
+            logo_width = $logoSmall;
 
         }
        } else {
          document.getElementById('navbarbg').style.backgroundColor = "rgba(0,0,0,0)";
-         if(logo_width === '40px'){
-           document.getElementById('logo').style.width = '40px';
+         if(logo_width === $logoSmall){
+           document.getElementById('logo').style.width = $logoSmall;
            $( "#logo" ).animate({
-             width: '100px'
+             width: $logoBig
           }, 300, function() {
             // Animation complete.
             console.log("Big");
@@ -63,7 +65,7 @@ console.log(logo_width)
 
          });
           // document.getElementById('logo').style.width = "100px";
-          logo_width = '100px';
+          logo_width = $logoBig;
 
         }
 
