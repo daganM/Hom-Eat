@@ -18,7 +18,9 @@
 var $window = $(window);
 // Change nav bg color function of scroll
 $(document).ready(function() {
-var logo_width = document.getElementById('logo').style.width = '100px'
+if (document.getElementById('logo') !== 'undefined') {
+  var logo_width = document.getElementById('logo').style.width = '100px'
+}
 console.log(logo_width)
   $(window).scroll(function(){
 
@@ -31,7 +33,7 @@ console.log(logo_width)
             }, 300, function() {
               console.log("Small");
             });
-            $( "nav h1" ).animate({
+            $( "#navbar-home" ).animate({
               margin: '0 0 0 0'
            }, 300, function() {
              // Animation complete.
@@ -53,7 +55,7 @@ console.log(logo_width)
             console.log("Big");
 
           });
-          $( "nav h1" ).animate({
+          $( "#navbar-home" ).animate({
             margin: '30px 0 0 0'
          }, 300, function() {
            // Animation complete.
