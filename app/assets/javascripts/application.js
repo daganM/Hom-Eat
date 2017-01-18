@@ -23,12 +23,30 @@ $(document).ready(function() {
 if (document.getElementById('logo') !== 'undefined') {
   var logo_width = document.getElementById('logo').style.width = $logoBig
 }
+var logoAnimate = function(oldwidth, newwidth, newmargin){
+  document.getElementById('logo').style.width = oldwidth;
+    $( "#logo" ).animate({
+      width: newwidth
+   }, 300, function() {
+     console.log("Small");
+   });
+   $( "#navbar-home" ).animate({
+     margin: newmargin
+  }, 300, function() {
+    // Animation complete.
+    console.log("Big");
+
+  });
+   // document.getElementById('logo').style.width = "40px";
+   logo_width = newwidth;
+};
 console.log(logo_width)
   $(window).scroll(function(){
 
        if ($window.scrollTop() >= 100){
          document.getElementById('navbarbg').style.backgroundColor = "rgba(51,41,30,0.6)";
          if(logo_width === $logoBig){
+           logoAnimate($logoBig, $logoSmall, '0 0 0 0');
            document.getElementById('logo').style.width = $logoBig;
              $( "#logo" ).animate({
                width: $logoSmall
@@ -49,27 +67,8 @@ console.log(logo_width)
        } else {
          document.getElementById('navbarbg').style.backgroundColor = "rgba(0,0,0,0)";
          if(logo_width === $logoSmall){
-           document.getElementById('logo').style.width = $logoSmall;
-           $( "#logo" ).animate({
-             width: $logoBig
-          }, 300, function() {
-            // Animation complete.
-            console.log("Big");
-
-          });
-          $( "#navbar-home" ).animate({
-            margin: '30px 0 0 0'
-         }, 300, function() {
-           // Animation complete.
-           console.log("Big");
-
-         });
-          // document.getElementById('logo').style.width = "100px";
-          logo_width = $logoBig;
-
+          logoAnimate($logoSmall, $logoBig, '30px 0 0 0');
         }
-
-
        }
       parralax = $window.scrollTop();
       parralax = parralax/3;
