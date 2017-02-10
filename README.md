@@ -1,7 +1,7 @@
 # Hom'Eat
 [![Code Climate](https://codeclimate.com/github/daganM/Hom-Eat/badges/gpa.svg)](https://codeclimate.com/github/daganM/Hom-Eat)
 
-_A project by Romain Richard developed by Dagan MENEZ_
+_A project by Romain RICHARD developed by Dagan MENEZ_
 
 **Important : You still may have issue with the confirmation email sent for sign up on production platform. You can test the app using this account : dagan.menez[at]free[dot]fr. Password : 123456
 
