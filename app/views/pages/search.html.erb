@@ -10,7 +10,13 @@
           <%= link_to meal do %>
             <div class="col-xs-12 col-sm-3 search_item">
               <div class="cover" style="background: url(<%= image_url('Food/food3.jpg') %>); background-size: cover; background-position: center;">
-                <p><%= meal.date %></p>
+                <% if meal.date.today? %>
+                  <p><%= meal.date.strftime("Aujourd'hui à %H:%M") %></p>
+                <% elsif meal.date.to_date == Date.tomorrow %>
+                  <p><%= meal.date.strftime("Demain à %H:%M") %>
+                <% else %>
+                  <p><%= meal.date.strftime("Le %d/%m à %H:%M") %></p>
+                <% end %>
               </div>
               <div class="user">
                 <div class="row">
